@@ -78,7 +78,8 @@ module.exports = {
   module: {
    rules: [
      { test: /\.(ts|tsx|jsx)$/, loader: "ts-loader" },
-     { test: /\.css$/, use: ['style-loader','css-loader'] }
+     { test: /\.css$/, use: ['style-loader','css-loader'] },
+      {test: /\.ts$/, exclude: /node_modules/, loader: 'ts-loader'}    
    ]
   },
   plugins: [
